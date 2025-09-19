@@ -108,7 +108,7 @@ function checkRateLimit(ip) {
 // VULNERABILITY: Weak session token generation
 function generateSessionToken() {
     // Using timestamp and random number - predictable
-    return Buffer.from(`${Date.now()}-${Math.random()}`).toString('base64');
+    return Buffer.from(`${Date.now()}-${crypto.randomBytes(16).toString('hex')}`).toString('base64');
 }
 
 // VULNERABILITY: Exposed file system operations
