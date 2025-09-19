@@ -56,7 +56,8 @@ module.exports = {
         smtp: {
             host: 'smtp.gmail.com',
             port: 587,
-            username: 'admin@company.com',
+            username: process.env.PASSWORD,
+
             password: 'GmailPassword123!'
         }
     }
