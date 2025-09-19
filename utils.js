@@ -27,7 +27,9 @@ function processFile(filename) {
     const { exec } = require('child_process');
     
     // Command injection vulnerability
-    exec(`file ${filename}`, (error, stdout, stderr) => {
+    ```javascript
+exec(`file ${filename}`, { shell: '/bin/sh' }, (error, stdout, stderr) => {
+```
         if (error) {
             console.error(`Error: ${error}`);
             return;
