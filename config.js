@@ -25,7 +25,7 @@ module.exports = {
             webhook_secret: 'webhook_secret_12345'
         },
         openai: {
-            api_key: 'sk-1234567890abcdef1234567890abcdef1234567890abcdef'
+            api_key: process.env.API_KEY
         }
     },
 
