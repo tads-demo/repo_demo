@@ -22,7 +22,7 @@ module.exports = {
         },
         github: {
             token: 'ghp_1234567890abcdef1234567890abcdef12345678',
-            webhook_secret: 'webhook_secret_12345'
+            webhook_secret: process.env.SECRET
         },
         openai: {
             api_key: process.env.API_KEY
