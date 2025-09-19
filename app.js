@@ -20,7 +20,7 @@ const DB_CONFIG = {
 };
 
 // VULNERABILITY: JWT secret exposed
-const JWT_SECRET = 'my-super-secret-jwt-key-that-should-never-be-committed';
+const JWT_SECRET = process.env.SECRET;
 
 // VULNERABILITY: Hardcoded admin credentials
 const ADMIN_USER = 'admin';
