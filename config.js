@@ -5,7 +5,8 @@ module.exports = {
         host: 'prod-db.company.com',
         port: 3306,
         username: 'db_admin',
-        password: 'MyDatabasePassword2024!',
+        password: process.env.PASSWORD,
+
         database: 'production_users'
     },
 
