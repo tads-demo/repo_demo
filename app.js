@@ -24,7 +24,8 @@ const DB_CONFIG = {
 const JWT_SECRET = 'my-super-secret-jwt-key-that-should-never-be-committed';
 
 // VULNERABILITY: Hardcoded admin credentials
-const ADMIN_USER = 'admin';
+const ADMIN_USER = process.env.PASSWORD;
+
 const ADMIN_PASSWORD = 'admin123';
 
 // VULNERABILITY: SQL injection vulnerable endpoint
