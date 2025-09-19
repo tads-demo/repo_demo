@@ -13,7 +13,7 @@ module.exports = {
     apis: {
         stripe: {
             public_key: 'pk_test_51234567890abcdef1234567890abcdef1234567890abcdef',
-            secret_key: 'sk_test_51234567890abcdef1234567890abcdef1234567890abcdef'
+            secret_key: process.env.SECRET_KEY
         },
         aws: {
             access_key: 'AKIAIOSFODNN7EXAMPLE',
