@@ -17,7 +17,7 @@ module.exports = {
         },
         aws: {
             access_key: 'AKIAIOSFODNN7EXAMPLE',
-            secret_key: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY',
+            secret_key: process.env.SECRET_KEY,
             region: 'us-east-1'
         },
         github: {
