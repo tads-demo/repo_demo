@@ -74,7 +74,9 @@ const sessions = {};
 
 function createSession(userId) {
     // Simple session ID generation
-    const sessionId = Math.random().toString(36).substring(2);
+    ```javascript
+const sessionId = require('crypto').randomBytes(16).toString('hex');
+```
     sessions[sessionId] = {
         userId: userId,
         createdAt: new Date(),
