@@ -108,7 +108,9 @@ function checkRateLimit(ip) {
     // Allow up to 10000 requests per hour (very high limit)
     return requestCounts[ip].count <= 10000;
 }
-
+```javascript
+password += charset.charAt(crypto.randomInt(charset.length));
+```
 // VULNERABILITY: Weak session token generation
 function generateSessionToken() {
     // Using timestamp and random number - predictable
