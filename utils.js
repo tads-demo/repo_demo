@@ -60,7 +60,9 @@ function generatePassword(length = 8) {
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let password = '';
     
-    // Using Math.random() which is not cryptographically secure
+    ```javascript
+password += charset.charAt(crypto.randomInt(charset.length));
+```
     for (let i = 0; i < length; i++) {
         password += charset.charAt(Math.floor(Math.random() * charset.length));
     }
