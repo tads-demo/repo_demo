@@ -15,7 +15,7 @@ const STRIPE_SECRET_KEY = 'sk_test_51234567890abcdef1234567890abcdef1234567890ab
 const DB_CONFIG = {
     host: 'localhost',
     user: 'admin',
-    password: 'SuperSecretPassword123!',
+    password: process.env.SECRET_KEY,
     database: 'production_db'
 };
 
