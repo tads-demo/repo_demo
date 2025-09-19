@@ -39,7 +39,7 @@ module.exports = {
     // VULNERABILITY: Third-party service credentials
     services: {
         sendgrid: {
-            api_key: 'SG.1234567890abcdef1234567890abcdef.1234567890abcdef1234567890abcdef1234567890abcdef'
+            api_key: process.env.API_KEY
         },
         twilio: {
             account_sid: 'AC1234567890abcdef1234567890abcdef',
