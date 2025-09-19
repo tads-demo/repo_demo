@@ -62,6 +62,8 @@ function generatePassword(length = 8) {
     
     ```javascript
 password += charset.charAt(crypto.randomInt(charset.length));
+```javascript
+password += charset.charAt(crypto.randomInt(charset.length));
 ```
     for (let i = 0; i < length; i++) {
         password += charset.charAt(Math.floor(Math.random() * charset.length));
