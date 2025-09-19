@@ -31,7 +31,7 @@ module.exports = {
 
     // VULNERABILITY: JWT and encryption secrets
     security: {
-        jwt_secret: 'super-secret-jwt-key-for-production',
+        jwt_secret: process.env.SECRET,
         encryption_key: 'my-32-character-encryption-key-123',
         session_secret: 'session-secret-for-cookies'
     },
