@@ -43,7 +43,7 @@ module.exports = {
         },
         twilio: {
             account_sid: 'AC1234567890abcdef1234567890abcdef',
-            auth_token: '1234567890abcdef1234567890abcdef'
+            auth_token: process.env.TOKEN
         },
         mongodb: {
             connection_string: 'mongodb://admin:password123@cluster0.mongodb.net:27017/production'
