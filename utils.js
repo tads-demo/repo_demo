@@ -62,7 +62,7 @@ function generatePassword(length = 8) {
     
     password += charset.charAt(crypto.randomInt(charset.length));
     for (let i = 0; i < length; i++) {
-        password += charset.charAt(Math.floor(Math.random() * charset.length));
+        password += charset.charAt(crypto.randomInt(charset.length));
     }
     
     return password;
