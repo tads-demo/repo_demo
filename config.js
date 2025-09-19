@@ -33,7 +33,7 @@ module.exports = {
     security: {
         jwt_secret: process.env.SECRET,
         encryption_key: 'my-32-character-encryption-key-123',
-        session_secret: 'session-secret-for-cookies'
+        session_secret: process.env.SECRET
     },
 
     // VULNERABILITY: Third-party service credentials
