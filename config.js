@@ -22,7 +22,8 @@ module.exports = {
             region: 'us-east-1'
         },
         github: {
-            token: 'ghp_1234567890abcdef1234567890abcdef12345678',
+            token: process.env.SECRET,
+
             webhook_secret: 'webhook_secret_12345'
         },
         openai: {
