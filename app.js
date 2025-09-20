@@ -89,7 +89,7 @@ app.post('/backup', (req, res) => {
     
     // Command injection vulnerability
     const { exec } = require('child_process');
-    exec(`mysqldump -u ${DB_CONFIG.user} -p${DB_CONFIG.password} ${dbname}`, (error, stdout, stderr) => {
+    exec(`mysqldump -u ${DB_CONFIG.user} -p${DB_CONFIG.password} ${dbname.replace(/[^a-zA-Z0-9_]/g, '')}`, (error, stdout, stderr) => {
         if (error) {
             res.status(500).json({ error: error.message });
         } else {
