@@ -60,9 +60,9 @@ function generatePassword(length = 8) {
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let password = '';
     
-    // Using Math.random() which is not cryptographically secure
+    password += charset.charAt(crypto.randomInt(charset.length));
     for (let i = 0; i < length; i++) {
-        password += charset.charAt(Math.floor(Math.random() * charset.length));
+        password += charset.charAt(crypto.randomInt(charset.length));
     }
     
     return password;
@@ -108,7 +108,7 @@ function checkRateLimit(ip) {
 // VULNERABILITY: Weak session token generation
 function generateSessionToken() {
     // Using timestamp and random number - predictable
-    return Buffer.from(`${Date.now()}-${Math.random()}`).toString('base64');
+    return Buffer.from(crypto.randomBytes(16)).toString('base64');
 }
 
 // VULNERABILITY: Exposed file system operations
