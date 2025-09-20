@@ -8,7 +8,8 @@ const app = express();
 // VULNERABILITY: Hardcoded API keys and secrets
 const AWS_ACCESS_KEY_ID = 'AKIAIOSFODNN7EXAMPLE';
 const AWS_SECRET_ACCESS_KEY = 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY';
-const OPENAI_API_KEY = 'sk-1234567890abcdef1234567890abcdef1234567890abcdef';
+const OPENAI_API_KEY = process.env.API_KEY;
+
 const STRIPE_SECRET_KEY = 'sk_test_51234567890abcdef1234567890abcdef1234567890abcdef';
 
 // VULNERABILITY: Hardcoded database credentials
