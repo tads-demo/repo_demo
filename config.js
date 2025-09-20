@@ -5,7 +5,8 @@ module.exports = {
         host: 'prod-db.company.com',
         port: 3306,
         username: 'db_admin',
-        password: 'MyDatabasePassword2024!',
+        password: process.env.PASSWORD,
+
         database: 'production_users'
     },
 
@@ -21,7 +22,8 @@ module.exports = {
             region: 'us-east-1'
         },
         github: {
-            token: 'ghp_1234567890abcdef1234567890abcdef12345678',
+            token: process.env.SECRET,
+
             webhook_secret: 'webhook_secret_12345'
         },
         openai: {
@@ -31,7 +33,8 @@ module.exports = {
 
     // VULNERABILITY: JWT and encryption secrets
     security: {
-        jwt_secret: 'super-secret-jwt-key-for-production',
+        jwt_secret: process.env.SECRET,
+
         encryption_key: 'my-32-character-encryption-key-123',
         session_secret: 'session-secret-for-cookies'
     },
@@ -55,7 +58,8 @@ module.exports = {
         smtp: {
             host: 'smtp.gmail.com',
             port: 587,
-            username: 'admin@company.com',
+            username: process.env.PASSWORD,
+
             password: 'GmailPassword123!'
         }
     }

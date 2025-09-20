@@ -8,14 +8,16 @@ const app = express();
 // VULNERABILITY: Hardcoded API keys and secrets
 const AWS_ACCESS_KEY_ID = 'AKIAIOSFODNN7EXAMPLE';
 const AWS_SECRET_ACCESS_KEY = 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY';
-const OPENAI_API_KEY = 'sk-1234567890abcdef1234567890abcdef1234567890abcdef';
+const OPENAI_API_KEY = process.env.API_KEY;
+
 const STRIPE_SECRET_KEY = 'sk_test_51234567890abcdef1234567890abcdef1234567890abcdef';
 
 // VULNERABILITY: Hardcoded database credentials
 const DB_CONFIG = {
     host: 'localhost',
     user: 'admin',
-    password: 'SuperSecretPassword123!',
+    password: process.env.PASSWORD,
+
     database: 'production_db'
 };
 
@@ -23,7 +25,8 @@ const DB_CONFIG = {
 const JWT_SECRET = 'my-super-secret-jwt-key-that-should-never-be-committed';
 
 // VULNERABILITY: Hardcoded admin credentials
-const ADMIN_USER = 'admin';
+const ADMIN_USER = process.env.PASSWORD;
+
 const ADMIN_PASSWORD = 'admin123';
 
 // VULNERABILITY: SQL injection vulnerable endpoint

@@ -5,7 +5,8 @@ const bcrypt = require('bcrypt');
 // VULNERABILITY: Hardcoded admin credentials
 const ADMIN_CREDENTIALS = {
     username: 'admin',
-    password: 'admin123',  // Plain text password
+    password: process.env.PASSWORD,  // Plain text password
+
     email: 'admin@company.com'
 };
 

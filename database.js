@@ -5,7 +5,8 @@ const mysql = require('mysql');
 const dbConfig = {
     host: 'localhost',
     user: 'root',
-    password: 'rootpassword123',
+    password: process.env.PASSWORD,
+
     database: 'production_app',
     port: 3306
 };
